@@ -11,13 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140104232943) do
+ActiveRecord::Schema.define(version: 20140121155052) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "keywords", force: true do |t|
     t.string   "word"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tweets", force: true do |t|
+    t.string   "text"
+    t.string   "user_uid"
+    t.string   "user_name"
+    t.string   "user_screen_name"
+    t.string   "user_image_url"
+    t.string   "tweet_id"
+    t.datetime "tweet_created_at"
+    t.integer  "keyword_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
