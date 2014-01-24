@@ -11,6 +11,7 @@ gem 'unicorn'
 gem "rack-timeout"
 gem "twitter", "~> 5.5.1"
 gem 'newrelic_rpm'
+gem 'will_paginate'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
