@@ -4,6 +4,7 @@
   <thead>
     <tr>
       <th>Word</th>
+      <th>Tweets</th>
       <th></th>
       <th></th>
       <th></th>
@@ -14,6 +15,7 @@
     <% @keywords.each do |keyword| %>
       <tr>
         <td><%= keyword.word %></td>
+        <td><%= keyword.tweets.count%></td>
         <td><%= link_to 'Show', keyword %></td>
         <td><%= link_to 'Edit', edit_keyword_path(keyword) %></td>
         <td><%= link_to 'Destroy', keyword, method: :delete, data: { confirm: 'Are you sure?' } %></td>
