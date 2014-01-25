@@ -1,5 +1,6 @@
 class Keyword < ActiveRecord::Base
   has_many :tweets
+  mount_uploader :image, ImageUploader
   
   def grab_twitts
     client = Twitter::REST::Client.new do |config|

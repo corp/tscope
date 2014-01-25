@@ -12,6 +12,8 @@ gem "rack-timeout"
 gem "twitter", "~> 5.5.1"
 gem 'newrelic_rpm'
 gem 'will_paginate'
+gem "carrierwave", "~> 0.9.0"
+gem 'fog', '~> 1.3.1'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'

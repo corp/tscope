@@ -1,4 +1,4 @@
-<%= form_for(@keyword) do |f| %>
+<%= form_for @keyword, :html => {:multipart => true} do |f| %>
   <% if @keyword.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@keyword.errors.count, "error") %> prohibited this keyword from being saved:</h2>
@@ -15,6 +15,13 @@
     <%= f.label :word %><br>
     <%= f.text_field :word %>
   </div>
+
+  <div class="field">
+	  <%= image_tag(@keyword.image_url,:width=>"100") if @keyword.image? %>
+	  <%= f.file_field :image %>
+	  <%= f.hidden_field :image_cache %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
