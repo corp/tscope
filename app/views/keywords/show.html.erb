@@ -1,9 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Word:</strong>
-  <%= @keyword.word %>
-</p>
+<%= image_tag(@keyword.image.thumb.url) if @keyword.image? %>
+<h1><%= @keyword.word %></h1>
 
 <h2>Latest Twitts (<%=@keyword.tweets.count%>)</h2>
 <ul>
