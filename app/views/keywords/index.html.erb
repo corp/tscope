@@ -1,6 +1,8 @@
 <h2>Listing keywords</h2>
 
-<table>
+<%= link_to 'New Keyword', new_keyword_path, :class=>"btn btn-primary", :style=>"float:right" %>
+
+<table class="table table-striped">
   <thead>
     <tr>
 	  <th>Image</th>
@@ -18,9 +20,9 @@
 	    <td><%= image_tag(keyword.image.thumb.url) if keyword.image? %></td>
         <td><%= keyword.word %></td>
         <td><%= keyword.tweets.count%></td>
-        <td><%= link_to 'Show', keyword %></td>
-        <td><%= link_to 'Edit', edit_keyword_path(keyword) %></td>
-        <td><%= link_to 'Destroy', keyword, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', keyword, :class=>"btn btn-primary" %></td>
+        <td><%= link_to 'Edit', edit_keyword_path(keyword), :class=>"btn btn-success" %></td>
+        <td><%= link_to 'Destroy', keyword, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"btn btn-danger" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Keyword', new_keyword_path %>
+
