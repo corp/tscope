@@ -27,6 +27,9 @@ GEM
       tzinfo (~> 0.3.37)
     addressable (2.3.5)
     arel (4.0.1)
+    asset_sync (0.5.4)
+      activemodel
+      fog
     atomic (1.1.14)
     bootstrap-sass (3.1.0.0)
       sass (~> 3.2)
@@ -170,6 +173,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  asset_sync
   bootstrap-sass (~> 3.1.0)
   carrierwave (~> 0.9.0)
   coffee-rails (~> 4.0.0)
